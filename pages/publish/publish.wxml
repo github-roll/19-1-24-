@@ -1,0 +1,45 @@
+<!--logs.wxml-->
+<view wx:if="{{!success}}">
+  <view class='row'>
+    <label class='title'>我的地址</label>
+    <view class='row-info' bindtap="localtionSuccess">{{address}}</view>
+  </view>
+    <view class='row'>
+    <label class='title'>类型</label>
+    <view class='info'>
+      <radio-group bindchange="localtionChange">
+        <label>
+          <radio value="buy" checked="true" />求购
+          <radio value="sell" checked="true" />转让
+        </label>
+      </radio-group>
+    </view>
+  </view>
+    <view class='row'>
+    <label class='title'>说明</label>
+    <view class='info'>
+      <input 
+        class="info-input" 
+        placeholder="填写您的具体需求" 
+        placeholder-style="color:#AFAFAF;"
+        bindinput='localtionMessage'
+      />
+    </view>
+  </view>
+    <view class='row'>
+    <label class='title'>联系方式</label>
+    <view class='info'>
+      <input 
+        class="info-input" 
+        placeholder="填写您的联系方式" 
+        placeholder-style="color:#AFAFAF;"
+        bindinput='localtionContent'
+      />
+    </view>
+  </view>
+  <view class='submit-button' bindtap="localtionSubmit">发布信息</view>
+</view>
+<view wx:if="{{success}}" class='success'>
+  <view><icon type="success" size="24" class='success-icon'/>恭喜您，提交成功</view>
+  <button type="default" class='success-button' bindtap='backhomeClick'>返回首页</button>
+</view>

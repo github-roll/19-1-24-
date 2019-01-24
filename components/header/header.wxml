@@ -1,0 +1,1 @@
+<view class="components-header" bindtap="componHeadertap">{{header}}</view>

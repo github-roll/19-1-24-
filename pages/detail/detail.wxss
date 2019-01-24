@@ -1,0 +1,29 @@
+@import "../../components/header/header.wxss";
+
+page {
+  background: #F5F5F5;
+}
+.row {
+  line-height: 50px;
+  border-bottom: 1px solid #EAEAEA;
+  color: #AFAFAF;
+  font-family: '微软雅黑';
+  font-size: 17px;
+  background: #fff;
+}
+.row-info {
+  white-space: nowrap;
+	/*设置内容不换行*/
+	text-overflow: ellipsis;
+	/*设置文字超出文本框的内容显示成...*/
+	overflow: hidden;
+  /*设置内容超出隐藏*/
+}
+.title {
+  padding-left: 10px;
+  width: 90px;
+  float: left;
+}
+.info-input {
+  height: 50px;
+}

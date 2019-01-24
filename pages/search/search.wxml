@@ -1,0 +1,19 @@
+<view class='search-header'>
+  <input class='search-input' bindinput="bindKeyInput"></input>
+  <view class='search-btn' bindtap='searchClick'>搜索</view>
+</view>
+<view 
+  class='search-list'
+  wx:for="{{list}}"
+  wx:key="key"
+  id="{{item.localtionObject.id}}"
+  bindtap='searchItemid'
+>
+  <view class='list-title'>
+    {{item.province}} - {{item.city}} - {{item.area}} 
+    ({{item.localtionObject.type == 'buy' ? '求购' : '转让'}})
+  </view>
+  <view class='list-message'>
+    {{item.localtionObject.message}}
+  </view>
+</view>
